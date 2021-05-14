@@ -1,0 +1,40 @@
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#root > div {
+  height: 100vh;
+}
+
+#left-menu {
+  background-color: #E63946;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+#left-menu #logo {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 13px #e8d41f;
+  letter-spacing: 1px;
+  margin: 1.5vh 0;
+}
+
+#conversations {
+  background-color: #DDDDDD;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+#chat {
+  background-color: white;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+/*# sourceMappingURL=App.css.map */
