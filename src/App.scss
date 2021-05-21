@@ -7,6 +7,7 @@ $color-the-lightest: #F5F5F5;
 
 #root {
     display: flex;
+    flex-direction: column;
 
     >div {
         height: 100vh;
@@ -25,29 +26,31 @@ $color-the-lightest: #F5F5F5;
         color: white;
         text-shadow: 0px 0px 1rem rgba(232, 212, 31, 1);
         letter-spacing: 0.05rem;
-        margin: 1.5vh 0;
+        margin: 1.25rem 0 0.5rem 0;
     }
 
-    #menu {
+    #menu { 
+        display: flex;
 
         .option {
             color: white;
-            line-height: 3.5;
+            line-height: 2;
             font-size: 2rem;
             font-weight: bold;
             cursor: pointer;
+            width: 25%;
+            margin-bottom: 1rem;
 
             &:hover {
                 -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
                 -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-                // text-shadow: 0 0 10px rgba(232, 212, 31, 1);
             }
-                
 
             .content {
                 width: 70%;
                 margin: 0 auto;
+                text-align: center;
 
                 .icon {
                     font-size: 2.5rem;
@@ -57,6 +60,7 @@ $color-the-lightest: #F5F5F5;
                 
                 .text {
                     margin-left: 0.7rem;
+                    display: none;
                 }
             }
         }
@@ -66,10 +70,86 @@ $color-the-lightest: #F5F5F5;
 #conversations {
     background-color: $color-lighter;
     flex: 3;
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        filter: drop-shadow(0 0 1px rgb(110, 110, 110)) contrast(0.35);
+        margin: 5vh 0;
+        cursor: pointer;
+
+        img {
+            height: 3rem;
+            transform: scaleX(-1);
+            position: relative;
+            top: 0.2rem;
+        }
+    }
 }
 
 #chat {
     background-color: white;
     flex: 5;
-    // min-width: 550px;
+}
+
+@media screen and (min-width: 760px) {
+
+    #left-menu {
+    
+        #menu { 
+
+            .option {
+    
+                .content {
+                    text-align: left;
+    
+                    .icon {
+                        
+                    }
+                    
+                    .text {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1140px) {
+
+    #root {
+        flex-direction: row;
+    }
+
+    #left-menu {
+    
+        #logo {
+            margin: 1.5vh 0 0 0;
+            // display: inline-block;
+        }
+    
+        #menu { 
+            display: block;
+
+            .option {
+                width: 100%;
+                line-height: 3.5;
+                margin-bottom: 0;
+    
+                .content {
+                
+    
+                    .icon {
+                        
+                    }
+                    
+                    .text {
+                    
+                    }
+                }
+            }
+        }
+    }
 }

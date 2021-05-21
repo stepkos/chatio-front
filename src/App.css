@@ -2,6 +2,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #root > div {
@@ -22,15 +26,23 @@
   color: white;
   text-shadow: 0px 0px 1rem #e8d41f;
   letter-spacing: 0.05rem;
-  margin: 1.5vh 0;
+  margin: 1.25rem 0 0.5rem 0;
+}
+
+#left-menu #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #left-menu #menu .option {
   color: white;
-  line-height: 3.5;
+  line-height: 2;
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+  width: 25%;
+  margin-bottom: 1rem;
 }
 
 #left-menu #menu .option:hover {
@@ -41,6 +53,7 @@
 #left-menu #menu .option .content {
   width: 70%;
   margin: 0 auto;
+  text-align: center;
 }
 
 #left-menu #menu .option .content .icon {
@@ -51,6 +64,7 @@
 
 #left-menu #menu .option .content .text {
   margin-left: 0.7rem;
+  display: none;
 }
 
 #conversations {
@@ -60,10 +74,59 @@
           flex: 3;
 }
 
+#conversations header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-filter: drop-shadow(0 0 1px #6e6e6e) contrast(0.35);
+          filter: drop-shadow(0 0 1px #6e6e6e) contrast(0.35);
+  margin: 5vh 0;
+  cursor: pointer;
+}
+
+#conversations header img {
+  height: 3rem;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  position: relative;
+  top: 0.2rem;
+}
+
 #chat {
   background-color: white;
   -webkit-box-flex: 5;
       -ms-flex: 5;
           flex: 5;
+}
+
+@media screen and (min-width: 760px) {
+  #left-menu #menu .option .content {
+    text-align: left;
+  }
+  #left-menu #menu .option .content .text {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  #root {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #left-menu #logo {
+    margin: 1.5vh 0 0 0;
+  }
+  #left-menu #menu {
+    display: block;
+  }
+  #left-menu #menu .option {
+    width: 100%;
+    line-height: 3.5;
+    margin-bottom: 0;
+  }
 }
 /*# sourceMappingURL=App.css.map */
