@@ -16,14 +16,50 @@ $color-the-lightest: #F5F5F5;
 #left-menu {
     background-color: $color-main;
     flex: 2;
+    min-width: 250px;
+    // flex-basis: 300px;
 
     #logo {
         font-family: 'Pacifico', cursive;
         text-align: center;
         color: white;
-        text-shadow: 0px 0px 13px rgba(232, 212, 31, 1);
-        letter-spacing: 1px;
+        text-shadow: 0px 0px 1rem rgba(232, 212, 31, 1);
+        letter-spacing: 0.05rem;
         margin: 1.5vh 0;
+    }
+
+    #menu {
+
+        .option {
+            color: white;
+            line-height: 3.5;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+                // text-shadow: 0 0 10px rgba(232, 212, 31, 1);
+            }
+                
+
+            .content {
+                width: 70%;
+                margin: 0 auto;
+
+                .icon {
+                    font-size: 2.5rem;
+                    position: relative;
+                    top: 0.5rem;
+                }
+                
+                .text {
+                    margin-left: 0.7rem;
+                }
+            }
+        }
     }
 }
 
@@ -35,4 +71,5 @@ $color-the-lightest: #F5F5F5;
 #chat {
     background-color: white;
     flex: 5;
+    // min-width: 550px;
 }

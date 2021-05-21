@@ -1,15 +1,11 @@
 import './App.css';
-import LeftMenu from './layout/LeftMenu';
-import Conversations from './layout/Conversations';
-import Chat from './layout/Chat';
+import ChatRWD from './pages/ChatRWD';
 
 function App() {
   return (
-    <>
-      <LeftMenu />
-      <Conversations />
-      <Chat />
-    </>
+
+    <ChatRWD />
+    
   );
 }
 

@@ -1,9 +1,12 @@
-export const MenuOption = ({ name, link }) => {
+const MenuOption = ({ text, icon, link }) => {
     return (
-        <a href={link}>
-            <div className='menu-option'>
-                    
+        <div className='option'>
+            <div className='content'>
+                <span className='material-icons icon'>{icon}</span>
+                <span className='text'>{text}</span>
             </div>
-        </a>
+        </div>
     )
 }
+
+export default MenuOption;
