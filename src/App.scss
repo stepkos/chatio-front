@@ -17,7 +17,6 @@ $color-the-lightest: #F5F5F5;
 #left-menu {
     background-color: $color-main;
     flex: 2;
-    min-width: 250px;
     // flex-basis: 300px;
 
     #logo {
@@ -48,7 +47,7 @@ $color-the-lightest: #F5F5F5;
             }
 
             .content {
-                width: 70%;
+                width: fit-content;
                 margin: 0 auto;
                 text-align: center;
 
@@ -124,6 +123,7 @@ $color-the-lightest: #F5F5F5;
     }
 
     #left-menu {
+        // min-width: 250px;
     
         #logo {
             margin: 1.5vh 0 0 0;
@@ -139,7 +139,8 @@ $color-the-lightest: #F5F5F5;
                 margin-bottom: 0;
     
                 .content {
-                
+                    // width: 70%;
+                    width: 180px;
     
                     .icon {
                         

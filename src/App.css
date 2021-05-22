@@ -17,7 +17,6 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  min-width: 250px;
 }
 
 #left-menu #logo {
@@ -51,7 +50,9 @@
 }
 
 #left-menu #menu .option .content {
-  width: 70%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 0 auto;
   text-align: center;
 }
@@ -127,6 +128,9 @@
     width: 100%;
     line-height: 3.5;
     margin-bottom: 0;
+  }
+  #left-menu #menu .option .content {
+    width: 180px;
   }
 }
 /*# sourceMappingURL=App.css.map */
